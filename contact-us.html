@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Tech Elevator Popsicles - Contact Us</title>
+</head>
+<body>
+    <header id = "Pop-head">
+        <div class="img-h1">
+            <img src = "images/te-pops.png" alt = "te-pops" />
+            <h1>Tech Elevator Popsicles</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#">Store</a></li>
+                <li><a href="contact-us.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="main-contact">
+        <h2>Contact Us</h2>
+        <div class="contact-div">
+            <form action="contact-us" method="POST">
+                <label for="name">Name:</label><br>
+                <input type="text" id="name" required="required"><br>
+                <label for="how-did">How did you hear about us?</label><br>
+                <select name="how-did" id="how-did">
+                    <option value="popsicle-monthly">Popsicle Monthly</option>
+                    <option value="word-of-mouth">Word of mouth</option>
+                    <option value="stick-overflow">StickOverflow</option>
+                </select><br>
+                <label for="favorite-color">What color is your favorite popsicle?</label><br>
+                <input type="color" id="favorite-color" name="favorite-color" /><br>
+                <label for="comments">Please let us know any comments you have: </label><br>
+                <textarea name="comments" id="comments" cols="50" rows="13"></textarea><br>
+                <div class="submit-button">
+                    <button type="submit">Submit</button>
+                </div>
+            </form>
+        </div>
+    </main>
+    <footer>
+        <div>&copy; Tech Elevator 2020</div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,283 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #87CEEB;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas: "header" "main" "div" "footer";
+    padding: 15px;
+    gap: 15px;
+}
+
+main {
+    grid-area: main;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-areas: "main-pic list";
+}
+
+#main-pic {
+    grid-area: main-pic;
+}
+
+#list {
+    grid-area: list;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: large;
+}
+
+div {
+    grid-area: div;
+    display: grid;
+    grid-auto-flow: column;
+    grid-gap: 10px;
+}
+
+footer {
+    grid-area: footer;
+}
+
+nav {
+    display: flex;
+    flex-grow: 1;
+    justify-content: flex-end;
+}
+
+nav ul {
+    margin: 0;
+    padding: 30px 0 0 0;
+    display: flex;
+    justify-content: space-around;
+    flex-basis: 90%;
+}
+
+nav ul li, .submit-button button {
+    list-style: none;
+    width: 30%;
+    background-color: #00AFEF;
+    border-radius: 5px;
+    border-color: transparent;
+    text-align: center;
+    line-height: 55px;
+    height: 75%;
+}
+
+nav ul li a {
+    text-decoration: none;
+    font-weight: bolder;
+    color: black;
+    font-size: 90%;
+    text-transform: uppercase;
+}
+    
+header {
+    grid-area: header;
+    display: flex;
+}
+
+header img {
+    height: 100px;
+    width: auto;
+}
+
+header h1 {
+    padding-left: 20px;
+    padding-top: 10px;
+}
+
+main img {
+    object-fit: cover;
+    margin-right: 20px;
+    height: 550px;
+    width: 100%;
+}
+
+main li:before {
+    content: '🍡';
+    line-height: 1.8;
+    margin-left: -31px;
+    padding-right: 8px;
+}
+
+main, section, footer {
+    background-color: #FFFFFF;
+    border-radius: 5px;
+    padding: 20px;
+}
+
+main.main-contact {
+    display: block;
+}
+
+.contact-div label {
+    display: inline-block;
+    padding-top: 1.5rem;
+}
+
+.submit-button {
+    display: block;
+    margin-top: 1.5rem;
+}
+
+.submit-button button {
+    color: #FFF;
+    font-weight: bold;
+    font-size: larger;
+    width: 250px;
+}
+
+#refresh {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.store-button { /* used for store link in "Get refreshed" section */
+    width: 50%;
+    padding: 10px;
+    border-radius: 5px;
+    color: #000000;
+    background-color: #00AFEF;
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+#race {
+    display: flex;
+    flex-direction: row;
+}
+
+.race-h3-p {
+    display: flex;
+    flex-direction: column;
+}
+
+.race-h3-p > h3 {
+    text-align: center;
+}
+
+input, select {
+    min-height: 30px;
+    min-width: 300px;
+}
+
+@media only screen and (max-width: 800px) {
+    body {
+        display: flex;
+        flex-direction: column;
+    }
+
+    div {
+        display: flex;
+        flex-direction: column;
+    }
+
+    main {
+        display: flex;
+        flex-direction: column;
+    }
+
+    header {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .img-h1 {
+        display: flex;
+        flex-direction: row;
+    }
+
+    #race {
+        display: flex;
+        /* flex-direction: column; */
+        /* flex-wrap: wrap; */
+    }
+
+    #race img, .race-h3-p:first-child {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .media-h3-p {
+        display: flex;
+    }
+
+    #refresh {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #refresh > h4 {
+        font-size: 1.5em;
+    }
+
+    #refresh > p {
+        line-height: 35px;
+        width: 90%;
+    }
+
+    #refresh > .store-button {
+        flex-basis: 10%;
+    }
+
+    nav ul {
+        margin: 0;
+        padding: 20px 0 0 0;
+        display: flex;
+        justify-content: space-between;
+        flex-basis: 100%;
+    }
+
+    nav ul li {
+        text-decoration: none;
+        font-weight: bolder;
+        color: black;
+        font-size: large;
+        text-transform: uppercase;
+        padding-bottom: 5px;
+        line-height: 30px;
+    }
+
+    .main-contact {
+        height: auto;
+        align-items: center;
+    }
+
+    #name {
+        padding: 5px;
+        margin: 5px 0 25px 0;
+        width: 30em;
+    }
+
+    #how-did {
+        padding: 5px;
+        margin: 5px 0 25px 0;
+        width: 31em;
+    }
+
+    #favorite-color {
+        margin: 5px 0 25px 0;
+        width: 31em;
+    }
+
+    #comments {
+        padding: 5px;
+        margin: 5px 0 25px 0;
+        width: 30em;
+    }
+
+    .submit-button {
+        width: 50%;
+        padding: 10px;
+        border-radius: 5px;
+        color: #000000;
+        background-color: #00AFEF;
+        font-weight: bold;
+        text-align: center;
+        text-transform: uppercase;
+    }
+}
